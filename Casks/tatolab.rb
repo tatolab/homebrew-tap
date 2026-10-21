@@ -1,6 +1,6 @@
 cask "tatolab" do
-  version "0.46.3"
-  sha256 "1e8855ccd11d66433a7f9a7bf55d49ee475ca823a48f7a1f3126f3fded97fd82"
+  version "0.54.11"
+  sha256 "9d93f5c8268bab1bc4f5dc59a9637b5c02e2d01fd7d88a30b51129b4dc37082e"
 
   url "https://github.com/tatolab/streamlib/releases/download/v#{version}/Tatolab-#{version}-arm64.dmg"
   name "Tatolab"
@@ -12,6 +12,7 @@ cask "tatolab" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :sequoia
 
