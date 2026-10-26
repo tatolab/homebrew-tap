@@ -1,6 +1,6 @@
 cask "tatolab" do
-  version "0.54.11"
-  sha256 "9d93f5c8268bab1bc4f5dc59a9637b5c02e2d01fd7d88a30b51129b4dc37082e"
+  version "0.55.4"
+  sha256 "74c558079528685990a118ae5ca20c9b431f7def3d86c98550ddbbec24f3a0ca"
 
   url "https://github.com/tatolab/streamlib/releases/download/v#{version}/Tatolab-#{version}-arm64.dmg"
   name "Tatolab"
@@ -21,8 +21,8 @@ cask "tatolab" do
   uninstall launchctl: "com.tatolab.tatolabd",
             quit:      "com.tatolab.tatolab",
             delete:    [
+              "~/.local/bin/tatolab",
               "/usr/local/bin/tatolab",
-              "/Library/Application Support/Tatolab",
             ]
 
   zap trash: [
